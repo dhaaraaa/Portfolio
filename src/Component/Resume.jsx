@@ -28,7 +28,7 @@ function Resume() {
         {
             level: 'HSC',
             degree: '+2',
-            institution: 'Mount Zion Silver Jubliee Matric Hr. Sec.School',
+            institution: 'Mount Zion Silver Jubilee Matric Hr. Sec. School',
             location: 'Karaikudi',
             yearOfPassing: '2020',
             status: 'Completed',
@@ -37,7 +37,7 @@ function Resume() {
         {
             level: 'STATEBOARD',
             degree: '10',
-            institution: 'Mount Zion Silver Jubliee Matric Hr. Sec.School',
+            institution: 'Mount Zion Silver Jubilee Matric Hr. Sec. School',
             location: 'Karaikudi',
             yearOfPassing: '2019',
             status: 'Completed',
@@ -47,6 +47,11 @@ function Resume() {
 
     const handleToggle = (index) => {
         setVisibleIndex(visibleIndex === index ? null : index);
+    };
+
+    const detailsVariants = {
+        open: { height: 'auto', opacity: 1 },
+        closed: { height: 0, opacity: 0 },
     };
 
     return (
@@ -69,19 +74,23 @@ function Resume() {
                 {educationDetails.map((item, index) => (
                     <div key={index} className='mb-4 flex flex-col justify-center'>
                         <div
+                            tabIndex={0}
+                            role="button"
+                            onKeyPress={(e) => e.key === 'Enter' && handleToggle(index)}
                             className='bg-blue-200 p-4 cursor-pointer rounded-sm text-black flex justify-between items-center'
                             onClick={() => handleToggle(index)}
                         >
-                            <h1 className='text-xl font-semibold text-gray-800'>{item.level}</h1>
+                            <h3 className='text-xl font-semibold text-gray-800'>{item.level}</h3>
                             <span>{visibleIndex === index ? '-' : '+'}</span>
                         </div>
                         <motion.div
-                            className={`p-4 bg-slate-100  `}
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={visibleIndex === index ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            initial={false}
+                            animate={visibleIndex === index ? "open" : "closed"}
+                            variants={detailsVariants}
+                            transition={{ duration: 0.3 }}
+                            className={`overflow-hidden`}
                         >
-                            <ul className='space-y-2  '>
+                            <ul className='space-y-2'>
                                 <li className='tracking-wider'><strong>Institution:</strong> {item.institution}</li>
                                 <li className='tracking-wider'><strong>Degree:</strong> {item.degree}</li>
                                 <li className='tracking-wider'><strong>Location:</strong> {item.location}</li>
