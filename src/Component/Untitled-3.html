@@ -1,0 +1,72 @@
+// src/Component/Projects.js
+import style from '../CSS/Home.module.css'; // Ensure this path is correct
+import Greenden from '../images/Greenden.png';
+import Details from './Details';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function Projects() {
+
+        const navigate = useNavigate();
+        const handleCaseStudyClick = () => {
+          navigate('/details'); // Navigate to the Details page programmatically
+        };
+    return (
+        <div>
+            <div className='p-14 mt-8 bg-slate-50'>
+                <div className="m-auto max-w-7xl w-9/12 text-center">
+                    <h2>
+                        <span className="font-extrabold text-black text-3xl tracking-wider relative mb-9">PROJECTS</span>
+                    </h2>
+                    <p className={`${style.line} bg-blue-200 mt-2`}></p>
+                    <p className='mt-7 text-xl p-2 leading-6 m-auto max-w-7xl block font-medium'>
+                        Explore a selection of personal projects I’ve developed, showcasing my work and skills
+                    </p>
+                </div>
+            </div>
+
+            <div className='p-6 bg-green-500'>
+                <div className='bg-pink-300 grid grid-cols-1 mb-2 justify-center items-center mt-4 gap-5 md:flex'>
+                    <div className='p-3 box-content bg-yellow-500 overflow-hidden'>
+                        <img src={Greenden} alt="Greenden Project" className='block rounded-md border shadow-sm shadow-gray-100' />
+                    </div>
+                    <div className='bg-red-500 flex flex-col justify-center items-center p-2'>
+                        <h3 className='text-2xl tracking-wide text-black mb-4 font-extrabold'>Greenden</h3>
+                        <p className='text-xl tracking-normal leading-6 mb-1 text-gray-700'>
+                            Greenden is a sleek and responsive web application built with Tailwind CSS, HTML, and JavaScript.
+                            The project showcases a modern design and interactive features,
+                            leveraging Tailwind’s utility-first approach for efficient and scalable styling.
+                        </p>
+                        <button
+                            className='tracking-wide w-44 p-2 rounded-md text-center text-white shadow-sm shadow-gray-100
+                            font-bold transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>
+                            Case Study
+                        </button>
+                    </div>
+                </div>
+
+                {/* Second project example */}
+                <div className='bg-pink-300 grid grid-cols-1 mb-2 justify-center items-center mt-4 gap-5 md:flex'>
+                    <div className='p-3 box-content bg-yellow-500 overflow-hidden'>
+                        <img src={Greenden} alt="Greenden Project" className='block rounded-md border shadow-sm shadow-gray-100' />
+                    </div>
+                    <div className='bg-red-500 flex flex-col justify-center p-2 items-center'>
+                        <h3 className='text-2xl tracking-wide text-black mb-4 font-extrabold'>Greenden</h3>
+                        <p className='text-xl tracking-normal leading-6 mb-1 text-gray-700'>
+                            Greenden is a sleek and responsive web application built with Tailwind CSS, HTML, and JavaScript.
+                            The project showcases a modern design and interactive features,
+                            leveraging Tailwind’s utility-first approach for efficient and scalable styling.
+                        </p>
+                        <a href='Details'
+                            className='tracking-wide text-white w-44 p-2 border rounded-md text-center transition ease-in-out delay-150 bg-blue-500 shadow-sm shadow-gray-100
+                            hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'  onClick={handleCaseStudyClick}>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Projects;

@@ -1,0 +1,39 @@
+<section className='md:grid grid-cols-4 justify-center bg-red-600 '>
+                    {educationDetails.map((detail, index) => (
+                        <div key={index} className='p-2 bg-lime-400'>
+                        <div className='bg-orange-300 w-full h-full p-4 justify-center items-center rounded-lg'>
+
+                            <div className='text-center p-2 '>
+                                <h1 className='p-1'>{detail.level}</h1>
+                            </div>
+                            <div className='flex justify-center p-2'>
+                                <div className='bg-indigo-500   text-center p-9 w-96 md:w-full rounded-md'>
+                                    <ul>
+                                        <li>{detail.institution}</li>
+                                        <li>{detail.degree}</li>
+                                        <li>{detail.location}</li>
+                                        <li>Year of Passing: <span>{detail.yearOfPassing}</span></li>
+                                        <li>{detail.status}</li>
+                                        <li> <span>{detail.cgpa}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    ))}
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+<button className='flex items-center justify-center border-black border-2 w-24 h-11 text-center rounded-md tracking-wide bg-indigo-100 font-bold text leading-7 
+hover:bg-transparent active:bg-transparent focus:outline-none focus:ring focus:ring-transparent transition duration-300 ease-out md:ease-in'>
