@@ -7,7 +7,7 @@ import { fadeIn } from '../Component/animation';
 function Homes() {
     const [subtitles] = useState([
         { name: "Resume",  },
-        { name: "HireMe", color: "#fff0f5" }
+        { hire: "HireMe", color: "#fff0f5" }
     ]);
 
     return (
@@ -68,6 +68,9 @@ function Homes() {
                             >
                                 <a href={resume} download='Dharsh.pdf'>
                                     <span >{item.name}</span>
+                                </a>
+                                <a href='mailto:dharshu3764@gmail.com' >
+                                    <span>{item.hire}</span>
                                 </a>
                             </motion.button>
                         ))}
