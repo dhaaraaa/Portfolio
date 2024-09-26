@@ -3,8 +3,8 @@ import { IoMdContact } from "react-icons/io";
 function Contact() {
     return (
         <>
-            <div className=' p-8 bg-slate-50'>
-                <div className=" m-auto max-w-7xl w-9/12 text-center">
+            <div className='md: p-8 bg-slate-50 mt-8'>
+                <div className=" m-auto max-w-7xl w-9/12 text-center  mt-6">
                     <div className='flex justify-center items-center mt-2 p-3 '>
                         <h2><span className="font-extrabold text-black text-3xl tracking-wider relative mb-9 ">
                             CONTACT</span></h2>

@@ -46,7 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <div>
-            <div ref={homeRef}><Home /></div>
+            <div ref={homeRef}><Home scrollToSection={scrollToSection} /></div>
             <div ref={aboutRef}><About /></div>
             <div ref={resumeRef}><Resume /></div>
             <div ref={projectsRef}><Projects /></div>

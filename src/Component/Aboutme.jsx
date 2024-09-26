@@ -75,10 +75,10 @@ function About() {
                             Let’s connect to discuss how I can contribute to your team or share insights about technology!
                         </p>
                         <div className='flex justify-center items-center mt-6 p-4'>
-                            <a href='https://www.linkedin.com/in/dharsh06'>
+                            <a href='https://www.linkedin.com/in/dharsh06' target='__blank' >
                                 <img src={linkedin} className='w-10 h-10 cursor-pointer hover:opacity-50 rounded-md ' alt="LinkedIn" />
                             </a>
-                            <a href='https://www.linkedin.com/in/dharsh06'>
+                            <a href='https://github.com/dhaaraaa' target='__blank'>
                                 <FaGithub className='w-20 h-10' />
                             </a>
                         </div>
