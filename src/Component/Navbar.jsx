@@ -50,7 +50,7 @@ function Navbar({ scrollToSection }) {
                 </ul>
             </nav>
 
-            <div className={`fixed transition-all duration-500 bg-blue-50 w-[40%] h-screen z-50 ${menu ? 'left-[0]' : '-left-[60%]'} top-0 md:hidden `}>
+            <div className={`fixed transition-all duration-500 bg-blue-50 w-[70%] h-screen z-50 ${menu ? 'left-[0]' : '-left-[80%]'} top-0 md:hidden `}>
                 <div className=' flex justify-center items-center m-2 '>
                     <p className='text-xl right-6 mt-4 top-3 absolute text-center cursor-pointer hover:text-red-400' onClick={handleMenubar}>x</p>
                     <ul className="  flex flex-col justify-center mt-20 items-center gap-16 text-gray-600 md:hidden p-3">
